@@ -1,0 +1,524 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "null"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "pagination": {
+          "type": "object",
+          "properties": {
+            "page": {
+              "type": "integer"
+            },
+            "offset": {
+              "type": "integer"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "lastPage": {
+              "type": "integer"
+            },
+            "limit": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "page",
+            "offset",
+            "total",
+            "lastPage",
+            "limit"
+          ]
+        },
+        "data": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "ownership_type_id": {
+                  "type": "null"
+                },
+                "short_name": {
+                  "type": "string"
+                },
+                "role_list": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "role_id": {
+                          "type": "object",
+                          "properties": {
+                            "legal_person_role": {
+                              "type": "integer"
+                            }
+                          },
+                          "required": [
+                            "legal_person_role"
+                          ]
+                        },
+                        "address_list": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "district_id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "bti_object": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "required": [
+                                    "bti_object"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "district_id"
+                              ]
+                            }
+                          ]
+                        },
+                        "deffect_list": {
+                          "type": "null"
+                        },
+                        "infrastructure_list": {
+                          "type": "null"
+                        }
+                      },
+                      "required": [
+                        "role_id",
+                        "address_list",
+                        "deffect_list"
+                      ]
+                    }
+                  ]
+                },
+                "legal_parent_id": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "legal_parent_data": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "name"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "organization_id": {
+                  "type": "null"
+                },
+                "organization_data": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "id",
+                            "name"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "child_role_id": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "start_time": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "end_time": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "phone": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "additional_phone": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "email": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "website": {
+                  "type": "null"
+                },
+                "physical_address_id": {
+                  "type": "null"
+                },
+                "physical_address": {
+                  "type": "null"
+                },
+                "postal_address": {
+                  "type": "null"
+                },
+                "postal_address_id": {
+                  "type": "null"
+                },
+                "inn": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "kpp": {
+                  "type": "null"
+                },
+                "ogrn": {
+                  "type": "null"
+                },
+                "okpo": {
+                  "type": "null"
+                },
+                "correspondent_account": {
+                  "type": "null"
+                },
+                "bik": {
+                  "type": "null"
+                },
+                "bank": {
+                  "type": "null"
+                },
+                "account": {
+                  "type": "null"
+                },
+                "legal_address_id": {
+                  "type": "null"
+                },
+                "legal_address": {
+                  "type": "null"
+                },
+                "root_id": {
+                  "type": "string"
+                },
+                "user_name": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "create_date": {
+                  "type": "string"
+                },
+                "external_systems": {
+                  "type": "null"
+                },
+                "id_external_systems": {
+                  "type": "null"
+                },
+                "display_name": {
+                  "type": "string"
+                },
+                "matching": {
+                  "type": "null"
+                },
+                "state_id": {
+                  "type": "string"
+                },
+                "tree": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "parent_person_list": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "parent_id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "legal_person": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "required": [
+                                    "legal_person"
+                                  ]
+                                },
+                                "child_role_id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "legal_person_role": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "required": [
+                                    "legal_person_role"
+                                  ]
+                                },
+                                "parent_role_id": {
+                                  "type": "object",
+                                  "properties": {
+                                    "legal_person_role": {
+                                      "type": "integer"
+                                    }
+                                  },
+                                  "required": [
+                                    "legal_person_role"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "parent_id",
+                                "child_role_id",
+                                "parent_role_id"
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "parent_person_list"
+                      ]
+                    }
+                  ]
+                },
+                "is_matching": {
+                  "type": "boolean"
+                },
+                "is_active": {
+                  "type": "boolean"
+                },
+                "user_fio": {
+                  "type": "null"
+                },
+                "entity_access_type": {
+                  "type": "null"
+                }
+              },
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "name",
+                "ownership_type_id",
+                "short_name",
+                "role_list",
+                "legal_parent_id",
+                "legal_parent_data",
+                "organization_id",
+                "organization_data",
+                "child_role_id",
+                "start_time",
+                "end_time",
+                "phone",
+                "additional_phone",
+                "email",
+                "website",
+                "physical_address_id",
+                "physical_address",
+                "postal_address",
+                "postal_address_id",
+                "inn",
+                "kpp",
+                "ogrn",
+                "okpo",
+                "correspondent_account",
+                "bik",
+                "bank",
+                "account",
+                "legal_address_id",
+                "legal_address",
+                "root_id",
+                "user_name",
+                "start_date",
+                "end_date",
+                "create_date",
+                "external_systems",
+                "id_external_systems",
+                "display_name",
+                "matching",
+                "state_id",
+                "tree",
+                "is_matching",
+                "is_active",
+                "user_fio",
+                "entity_access_type"
+              ]
+            }
+          ]
+        },
+        "columns": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": [
+                    "id",
+                    "name",
+                    "ownership_type_id",
+                    "short_name",
+                    "role_list",
+                    "legal_parent_id",
+                    "legal_parent_data",
+                    "organization_id",
+                    "organization_data",
+                    "child_role_id",
+                    "start_time",
+                    "end_time",
+                    "phone",
+                    "additional_phone",
+                    "email",
+                    "website",
+                    "physical_address_id",
+                    "physical_address",
+                    "postal_address",
+                    "postal_address_id",
+                    "inn",
+                    "kpp",
+                    "ogrn",
+                    "okpo",
+                    "correspondent_account",
+                    "bik",
+                    "bank",
+                    "account",
+                    "legal_address_id",
+                    "legal_address",
+                    "root_id",
+                    "user_name",
+                    "start_date",
+                    "end_date",
+                    "create_date",
+                    "external_systems",
+                    "id_external_systems",
+                    "display_name",
+                    "matching",
+                    "state_id",
+                    "tree",
+                    "is_matching",
+                    "is_active",
+                    "user_fio",
+                    "entity_access_type"
+                  ]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            }
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "data",
+        "columns"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "code",
+    "message",
+    "data"
+  ]
+}

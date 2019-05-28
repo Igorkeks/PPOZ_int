@@ -1,0 +1,332 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Справочник источников заявок.",
+  "title": "Source Schema",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "null"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "pagination": {
+          "type": "object",
+          "required": [
+            "page",
+            "offset",
+            "total",
+            "lastPage",
+            "limit"
+          ],
+          "properties": {
+            "page": {
+              "type": "integer",
+              "title": "Текущая страница"
+            },
+            "offset": {
+              "type": "integer"
+            },
+            "total": {
+              "type": "integer",
+              "title": "Всего объектов"
+            },
+            "lastPage": {
+              "type": "integer",
+              "title": "Последняя страница"
+            },
+            "limit": {
+              "type": "integer",
+              "title": "Лимит"
+            }
+          }
+        },
+        "data": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "is_visible": {
+                  "type": "boolean"
+                },
+                "create_date": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "code",
+                "is_visible",
+                "create_date",
+                "start_date",
+                "end_date"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "is_visible": {
+                  "type": "boolean"
+                },
+                "create_date": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "code",
+                "is_visible",
+                "create_date",
+                "start_date",
+                "end_date"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "is_visible": {
+                  "type": "boolean"
+                },
+                "create_date": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "code",
+                "is_visible",
+                "create_date",
+                "start_date",
+                "end_date"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "is_visible": {
+                  "type": "boolean"
+                },
+                "create_date": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "code",
+                "is_visible",
+                "create_date",
+                "start_date",
+                "end_date"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "is_visible": {
+                  "type": "boolean"
+                },
+                "create_date": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "code",
+                "is_visible",
+                "create_date",
+                "start_date",
+                "end_date"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "is_visible": {
+                  "type": "boolean"
+                },
+                "create_date": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "code",
+                "is_visible",
+                "create_date",
+                "start_date",
+                "end_date"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "is_visible": {
+                  "type": "boolean"
+                },
+                "create_date": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "code",
+                "is_visible",
+                "create_date",
+                "start_date",
+                "end_date"
+              ]
+            }
+          ]
+        },
+        "columns": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "key"
+            ],
+            "properties": {
+              "key": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "name",
+                  "code",
+                  "is_visible",
+                  "create_date",
+                  "start_date",
+                  "end_date"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "data",
+        "columns"
+      ]
+    }
+  },
+  "required": [
+    "code",
+    "message",
+    "data"
+  ]
+}

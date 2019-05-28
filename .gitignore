@@ -1,0 +1,10 @@
+syntax: glob
+.allure/*
+.idea/*
+target/*
+*.iml
+debug.log
+allure-results/*
+build/*
+
+someCode

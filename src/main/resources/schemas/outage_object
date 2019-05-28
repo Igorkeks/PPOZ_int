@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Справочник объектов отключений",
+  "title": "Outage object Schema",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "null"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "pagination":{
+          "type": "object",
+          "properties": {
+            "page": {
+              "type": "integer"
+            },
+            "offset": {
+              "type": "integer"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "lastPage": {
+              "type": "integer"
+            },
+            "limit": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "page",
+            "offset",
+            "total",
+            "lastPage",
+            "limit"
+          ]
+        },
+        "data": {
+          "type": "array",
+          "items": {}
+        },
+        "columns": {
+          "type": "array",
+          "additionalProperties": false,
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": [
+                    "id"
+                  ]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": [
+                    "name"
+                  ]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": [
+                    "organization_id"
+                  ]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": [
+                    "bti_address"
+                  ]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": [
+                    "address_comment"
+                  ]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": [
+                    "address_list_id"
+                  ]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": [
+                    "object_type"
+                  ]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": [
+                    "ext_system"
+                  ]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            }
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "data",
+        "columns"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "code",
+    "message",
+    "data"
+  ]
+}

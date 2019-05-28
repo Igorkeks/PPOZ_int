@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "description": "Справочник видов отключений.",
+  "title": "outage_kind Schema",
+  "required": [
+    "code",
+    "message",
+    "data"
+  ],
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "null"
+    },
+    "data": {
+      "type": "object",
+      "required": [
+        "pagination",
+        "data",
+        "columns"
+      ],
+      "properties": {
+        "pagination": {
+          "type": "object",
+          "required": [
+            "page",
+            "offset",
+            "total",
+            "lastPage",
+            "limit"
+          ],
+          "properties": {
+            "page": {
+              "type": "integer"
+            },
+            "offset": {
+              "type": "integer"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "lastPage": {
+              "type": "integer"
+            },
+            "limit": {
+              "type": "integer"
+            }
+          }
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "code",
+              "name",
+              "create_date",
+              "start_date",
+              "end_date",
+              "is_active",
+              "is_last"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "create_date": {
+                "type": "string"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "end_date": {
+                "type": "string"
+              },
+              "is_active": {
+                "type": "boolean"
+              },
+              "is_last": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "columns": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "key"
+            ],
+            "properties": {
+              "key": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "code",
+                  "name",
+                  "display_name",
+                  "create_date",
+                  "start_date",
+                  "end_date",
+                  "is_active",
+                  "is_last"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Справочник категорий дефектов.",
+  "title": "Defect category Schema",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "null"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "pagination": {
+          "type": "object",
+          "required": [
+            "page",
+            "offset",
+            "total",
+            "lastPage",
+            "limit"
+          ],
+          "properties": {
+            "page": {
+              "type": "integer",
+              "title": "Текущая страница"
+            },
+            "offset": {
+              "type": "integer"
+            },
+            "total": {
+              "type": "integer",
+              "title": "Всего объектов"
+            },
+            "lastPage": {
+              "type": "integer",
+              "title": "Последняя страница"
+            },
+            "limit": {
+              "type": "integer",
+              "title": "Лимит"
+            }
+          }
+        },
+        "data": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "root_id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "null"
+                },
+                "create_date": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "attribute": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "attribute": {
+                      "type": "object",
+                      "properties": {
+                        "is_contractor": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "is_contractor"
+                      ]
+                    },
+                    "is_locked": {
+                      "type": "boolean"
+                    },
+                    "modified_date": {
+                      "type": "null"
+                    },
+                    "infrastructure_list_id": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "integer"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "attribute",
+                    "is_locked",
+                    "modified_date",
+                    "infrastructure_list_id"
+                  ]
+                },
+                "is_active": {
+                  "type": "boolean"
+                },
+                "user_name": {
+                  "type": "string"
+                },
+                "is_last": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "id",
+                "root_id",
+                "name",
+                "code",
+                "create_date",
+                "start_date",
+                "end_date",
+                "attribute",
+                "is_active",
+                "user_name",
+                "is_last"
+              ]
+            }
+          ]
+        },
+        "columns": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "key"
+            ],
+            "properties": {
+              "key": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "root_id",
+                  "name",
+                  "code",
+                  "create_date",
+                  "start_date",
+                  "end_date",
+                  "attribute",
+                  "is_active",
+                  "user_name",
+                  "is_last"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "data",
+        "columns"
+      ]
+    }
+  },
+  "required": [
+    "code",
+    "message",
+    "data"
+  ]
+}

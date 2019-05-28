@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "External System Schema",
+  "description": "Справочник внешних систем.",
+  "required": [
+    "code",
+    "message",
+    "data"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "message": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "data": {
+      "type": "object",
+      "title": "Содержимое ответа",
+      "required": [
+        "data",
+        "columns"
+      ],
+      "minProperties": 1,
+      "properties": {
+        "data": {
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "id",
+              "name",
+              "code",
+              "attribute",
+              "create_date",
+              "start_date",
+              "end_date",
+              "user_name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              },
+              "attribute": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "attribute"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "attribute": {
+                    "type": "object",
+                    "required": [
+                      "type"
+                    ],
+                    "properties": {
+                      "type": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              },
+              "create_date": {
+                "type": "string"
+              },
+              "start_date": {
+                "type": "string"
+              },
+              "end_date": {
+                "type": "string"
+              },
+              "user_name": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "columns": {
+          "type": "array",
+          "minItems": 8,
+          "maxItems": 8,
+          "items":{
+            "type": "object",
+            "required": [
+              "key"
+            ],
+            "properties": {
+              "key": {
+                "type":"string",
+                "enum": ["id","name", "code", "attribute",  "create_date",  "start_date", "end_date", "user_name" ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Справочник категорий консультаций",
+  "title": "Consultation category Schema",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "null"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "pagination": {
+          "type": "object",
+          "required": [
+            "page",
+            "offset",
+            "total",
+            "lastPage",
+            "limit"
+          ],
+          "properties": {
+            "page": {
+              "type": "integer",
+              "title": "Текущая страница"
+            },
+            "offset": {
+              "type": "integer"
+            },
+            "total": {
+              "type": "integer",
+              "title": "Всего объектов"
+            },
+            "lastPage": {
+              "type": "integer",
+              "title": "Последняя страница"
+            },
+            "limit": {
+              "type": "integer",
+              "title": "Лимит"
+            }
+          }
+        },
+        "data": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "root_id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "null"
+                },
+                "is_active": {
+                  "type": "boolean"
+                },
+                "create_date": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "user_name": {
+                  "type": "string"
+                },
+                "is_last": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "id",
+                "root_id",
+                "name",
+                "code",
+                "is_active",
+                "create_date",
+                "start_date",
+                "end_date",
+                "user_name",
+                "is_last"
+              ]
+            }
+          ]
+        },
+        "columns": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": ["id"]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": ["root_id"]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": ["name"]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": ["code"]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": ["is_active"]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": ["create_date"]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": ["start_date"]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": ["end_date"]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": ["user_name"]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "enum": ["is_last"]
+                }
+              },
+              "required": [
+                "key"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "data",
+        "columns"
+      ]
+    }
+  },
+  "required": [
+    "code",
+    "message",
+    "data"
+  ]
+}

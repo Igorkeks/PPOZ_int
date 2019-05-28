@@ -1,0 +1,186 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Адресный справочник.",
+  "type": "object",
+  "title": "Address Schema",
+  "required": [
+    "code",
+    "message",
+    "data"
+  ],
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "message": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "data": {
+      "type": "object",
+      "title": "Содержимое ответа",
+      "required": [
+        "data",
+        "columns"
+      ],
+      "properties": {
+        "pagination": {
+          "type": "object",
+          "required": [
+            "page",
+            "offset",
+            "total",
+            "lastPage",
+            "limit"
+          ],
+          "properties": {
+            "page": {
+              "type": "integer",
+              "title": "Текущая страница"
+            },
+            "offset": {
+              "type": "integer"
+            },
+            "total": {
+              "type": "integer",
+              "title": "Всего объектов"
+            },
+            "lastPage": {
+              "type": "integer",
+              "title": "Последняя страница"
+            },
+            "limit": {
+              "type": "integer",
+              "title": "Лимит"
+            }
+          }
+        },
+        "data": {
+          "type": "array",
+          "title": "Найденные данные",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "type_object",
+              "full_name",
+              "display_name",
+              "short_name",
+              "okrug_list_id",
+              "district_list_id",
+              "street_list_id",
+              "attribute",
+              "is_actual",
+              "parent_id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "type_object": {
+                "type": "string"
+              },
+              "full_name": {
+                "type": "string"
+              },
+              "display_name": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "short_name": {
+                "type": "string"
+              },
+              "okrug_list_id": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "district_list_id": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "street_list_id": {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "attribute": {
+                "type": "null"
+              },
+              "is_actual": {
+                "type": "boolean"
+              },
+              "parent_id": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "columns": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "key"
+            ],
+            "properties": {
+              "key": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "type_object",
+                  "full_name",
+                  "display_name",
+                  "short_name",
+                  "okrug_list_id",
+                  "district_list_id",
+                  "street_list_id",
+                  "attribute",
+                  "is_actual",
+                  "parent_id"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

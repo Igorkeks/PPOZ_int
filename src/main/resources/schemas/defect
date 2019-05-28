@@ -1,0 +1,259 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Справочник дефектов.",
+  "title": "Defect Schema",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "message": {
+      "type": "null"
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "pagination": {
+          "type": "object",
+          "required": [
+            "page",
+            "offset",
+            "total",
+            "lastPage",
+            "limit"
+          ],
+          "properties": {
+            "page": {
+              "type": "integer",
+              "title": "Текущая страница"
+            },
+            "offset": {
+              "type": "integer"
+            },
+            "total": {
+              "type": "integer",
+              "title": "Всего объектов"
+            },
+            "lastPage": {
+              "type": "integer",
+              "title": "Последняя страница"
+            },
+            "limit": {
+              "type": "integer",
+              "title": "Лимит"
+            }
+          }
+        },
+        "data": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "root_id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "short_name": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "null"
+                },
+                "deffect_category_id": {
+                  "type": "string"
+                },
+                "deffect_category_root_id": {
+                  "type": "string"
+                },
+                "deffect_category_name": {
+                  "type": "string"
+                },
+                "emergency_id": {
+                  "type": "string"
+                },
+                "payable_type_id": {
+                  "type": "string"
+                },
+                "is_available_lk": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                "is_available_portal": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                "is_on_citizen": {
+                  "anyOf": [
+                    {
+                      "type": "null"
+                    },
+                    {
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                "deadline": {
+                  "type": "string"
+                },
+                "create_date": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "required_fields": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "boolean"
+                    },
+                    "flat": {
+                      "type": "boolean"
+                    },
+                    "floor": {
+                      "type": "boolean"
+                    },
+                    "phone": {
+                      "type": "boolean"
+                    },
+                    "address": {
+                      "type": "boolean"
+                    },
+                    "entrance": {
+                      "type": "boolean"
+                    },
+                    "declarant": {
+                      "type": "boolean"
+                    },
+                    "description": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "flat",
+                    "floor",
+                    "phone",
+                    "address",
+                    "entrance",
+                    "declarant",
+                    "description"
+                  ]
+                },
+                "user_name": {
+                  "type": "string"
+                },
+                "is_active": {
+                  "type": "boolean"
+                },
+                "is_last": {
+                  "type": "boolean"
+                },
+                "object_type_city": {
+                  "type": "null"
+                },
+                "defect_category_is_active": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "id",
+                "root_id",
+                "name",
+                "short_name",
+                "code",
+                "deffect_category_id",
+                "deffect_category_root_id",
+                "deffect_category_name",
+                "emergency_id",
+                "payable_type_id",
+                "is_available_lk",
+                "is_available_portal",
+                "is_on_citizen",
+                "deadline",
+                "create_date",
+                "start_date",
+                "end_date",
+                "required_fields",
+                "user_name",
+                "is_active",
+                "is_last",
+                "object_type_city",
+                "defect_category_is_active"
+              ]
+            }
+          ]
+        },
+        "columns": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "key"
+            ],
+            "properties": {
+              "key": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "root_id",
+                  "name",
+                  "short_name",
+                  "code",
+                  "deffect_category_id",
+                  "deffect_category_root_id",
+                  "deffect_category_name",
+                  "emergency_id",
+                  "payable_type_id",
+                  "is_available_lk",
+                  "is_available_portal",
+                  "is_on_citizen",
+                  "deadline",
+                  "create_date",
+                  "start_date",
+                  "end_date",
+                  "required_fields",
+                  "user_name",
+                  "is_active",
+                  "is_last",
+                  "object_type_city",
+                  "defect_category_is_active"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "data",
+        "columns"
+      ]
+    }
+  },
+  "required": [
+    "code",
+    "message",
+    "data"
+  ]
+}
