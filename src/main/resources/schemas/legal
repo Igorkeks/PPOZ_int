@@ -83,7 +83,10 @@
                                   "type": "object",
                                   "properties": {
                                     "bti_object": {
-                                      "type": "integer"
+                                      "type": "array",
+                                      "items": {
+                                        "type": "number"
+                                      }
                                     }
                                   },
                                   "required": [
@@ -98,7 +101,17 @@
                           ]
                         },
                         "deffect_list": {
-                          "type": "null"
+                          "anyOf": [
+                            {
+                              "type": "null"
+                            },
+                            {
+                              "type": "array",
+                              "items": {
+                                "type": "integer"
+                              }
+                            }
+                          ]
                         },
                         "infrastructure_list": {
                           "type": "null"
@@ -269,6 +282,9 @@
                 "okpo": {
                   "type": "null"
                 },
+                "gbu": {
+                  "type": "null"
+                },
                 "correspondent_account": {
                   "type": "null"
                 },
@@ -419,6 +435,7 @@
                 "kpp",
                 "ogrn",
                 "okpo",
+                "gbu",
                 "correspondent_account",
                 "bik",
                 "bank",
