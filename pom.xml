@@ -18,7 +18,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>8</java.version>
         <rest.assured.version>3.3.0</rest.assured.version>
-        <json.version>20180130</json.version>
+        <json.version>20230227</json.version>
         <json-simple.version>1.1.1</json-simple.version>
         <json-schema-validator.version>3.3.0</json-schema-validator.version>
         <testng.version>6.11</testng.version>
